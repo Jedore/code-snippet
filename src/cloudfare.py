@@ -61,6 +61,5 @@ def del_deployments(deployments: list, retain: int = 5):
 
 
 if __name__ == '__main__':
-    while True:
-        deployments = get_deployments()
-        del_deployments(deployments, retain=3)
+    deployments = get_deployments()
+    del_deployments(deployments, retain=3)

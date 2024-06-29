@@ -97,12 +97,11 @@ def del_workflow_runs(runs: list, retain: int = 5):
 
 
 if __name__ == '__main__':
-    while True:
-        runs = get_workflow_runs()
-        del_workflow_runs(runs, 0)
+    runs = get_workflow_runs()
+    del_workflow_runs(runs, 0)
 
-        deployments = get_deployments(env='github-pages')
-        del_deployments(deployments, retain=50)
+    deployments = get_deployments(env='github-pages')
+    del_deployments(deployments, retain=50)
 
-        deployments = get_deployments(env='Production')
-        del_deployments(deployments, retain=0)
+    deployments = get_deployments(env='Production')
+    del_deployments(deployments, retain=0)
